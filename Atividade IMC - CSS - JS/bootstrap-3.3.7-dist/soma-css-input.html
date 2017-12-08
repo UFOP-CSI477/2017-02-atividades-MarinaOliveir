@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Soma - Input - CSS/Bootstrap</title>
+
+  <link rel="stylesheet" href="./css/bootstrap.css">
+
+  <script type="text/javascript">
+
+  function somar(){
+
+    var x = parseInt(document.dados.valor1.value);
+    var y = parseInt(document.dados.valor2.value);
+
+    if(document.dados.valor1.value.length == 0 || isNaN(x)){
+      window.alert("Informe o primeiro valor corretamente!");
+
+      document.getElementById("groupV1").classList.add("has-error");
+      document.getElementById("alertaV1").style.display = "Block";
+
+
+      document.dados.valor1.value = "";
+      document.dados.valor1.focus();
+      return;
+    }
+    document.getElementById("groupV1").classList.remove("has-error");
+    document.getElementById("alertaV1").style.display="none";
+
+    if(document.dados.valor2.value.length == 0 || isNaN(y)){
+      window.alert("Informe o segundo valor corretamente!");
+      document.dados.valor2.value = "";
+      document.dados.valor2.focus();
+      return;
+    }
+
+    var w = x + y;
+
+    document.dados.resultado.value = w;
+
+  }
+
+  </script>
+</head>
+<body>
+
+
+  <div class="container">
+
+    <div class="jumbotron" text-center>
+      Calcular a soma	- JS/CSS-Bootstrap
+    </div>
+
+
+    <form name="dados">
+
+      <div id="groupv1" class="form-group">
+
+        <label for="valor1">Primeiro Valor</label>
+        <input type="text" name="valor1" class="form-control"><br><br>
+
+        <div class="alert alert-danger" style="display: none;" id="alertav1">
+          Informe o primeiro número corretamente.
+        </div>
+
+      </div>
+
+      <div id="groupv2" class="form-group">
+        <label for="valor2">Segundo Valor</label>
+        <input type="text" name="valor2" class="form-control"><br><br>
+
+        <div class="alert alert-danger" style="display: none;" id="alertav2">
+          Informe o segundo número corretamente.
+        </div>
+      </div>
+
+      <div id="groupRes" class="form-group">
+        <label for="resultado">Resultado</label>
+        <input type="text" name="resultado" class="form-control">
+      </div>
+
+      <button type="button" onclick="somar()">Somar</button>
+
+    </form>
+  </div>
+
+</body>
+</html>

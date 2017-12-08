@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>IMC - CSS/Bootstrap</title>
+
+  <link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.css">
+
+  <script>
+
+  function calcularIMC() {
+
+    var peso = parseFloat(document.dados.valor1.value);
+    var altura = parseInt(document.dados.valor2.value);
+
+
+    if (document.dados.valor1.value.length == 0 ||
+      isNaN(peso)) {
+        document.getElementById("grupoV1").classList.add("has-error");
+        document.getElementById("alertaV1").style.display = "block";
+        document.dados.valor1.value = "" ;
+        document.dados.valor1.focus();
+        return;
+      }
+
+      document.getElementById("grupoV1").classList.remove("has-error");
+      document.getElementById("alertaV1").style.display = "none";
+
+      if (document.dados.valor2.value.length == 0 ||
+        isNaN(altura)) {
+          //window.alert("Informe o segundo valor corretamente!");
+          document.getElementById("grupoV2").classList.add("has-error");
+          document.getElementById("alertaV2").style.display = "block";
+          document.dados.valor2.value = "" ;
+          document.dados.valor2.focus();
+          return;
+        }
+
+        document.getElementById("grupoV2").classList.remove("has-error");
+        document.getElementById("alertaV2").style.display = "none";
+
+        var w = (peso/(altura*altura))*10000;
+        var arredondado1 = parseFloat(w.toFixed(3));
+        var pesoIdeal1 = (18.6 * (altura*altura))/10000;
+        var arredondado2 = parseFloat(pesoIdeal1.toFixed(3));
+        var pesoIdeal2 = (24.9 * (altura*altura))/10000;
+        var arredondado3 = parseFloat(pesoIdeal2.toFixed(3));
+
+        if (w <= 18.5){
+          document.dados.categoria.value = "Você está abaixo do peso";
+        }else{
+          if (w <= 24.99){
+            document.dados.categoria.value = "Você está no peso ideal";
+          }else{
+            if(w <= 29.99){
+              document.dados.categoria.value = "Você está com sobrepeso";
+            }else{
+              if(w <=34.99){
+                document.dados.categoria.value = "Você está com obesidade no grau I";
+              }else{
+                if(w <=39.99){
+                  document.dados.categoria.value = "Você está com obesidade no grau II";
+                }else{
+                  document.dados.categoria.value = "Você está com obesidade no grau III";
+                }
+              }
+            }
+          }
+        }
+
+        document.dados.resultado.value = arredondado1;
+
+        document.dados.pesoIdeal.value = "A faixa de peso ideal para você é de: " + arredondado2+" kg, até: "+arredondado3+" kg.";
+
+
+
+      }
+
+      </script>
+
+    </head>
+    <body>
+
+      <div class="container">
+
+        <div class="jumbotron text-center" style="background-color: #ccf5ff">
+          <h2>Calculo do IMC - JS/CSS - Bootstrap</h2>
+        </div>
+
+        <form name="dados">
+
+          <div id="grupoV1" class="form-group">
+            <label for="valor1">Insira seu peso em quilogramas:</label>
+            <input name="valor1" type="text" class="form-control">
+
+            <div class="alert alert-danger" style="display: none" id="alertaV1">
+              Informe o peso corretamente, em quilogramas.
+            </div>
+
+          </div>
+
+          <div id="grupoV2" class="form-group">
+            <label for="valor2">Insira sua altura em centímetros:</label>
+            <input name="valor2" type="text" class="form-control">
+
+            <div class="alert alert-danger" style="display: none" id="alertaV2">
+              Informe a altura corretamente, em centímetros.
+            </div>
+
+          </div>
+
+          <div id="grupoRes" class="form-group">
+            <label for="resultado">IMC - Resultado:</label>
+            <input name="resultado" type="tepesot" disabled="disabled" class="form-control">
+          </div>
+
+          <div id="grupoCategoria" class="form-group">
+            <label for="categoria">Categoria:</label>
+            <input name="categoria" type="tepesot" disabled="disabled" class="form-control">
+          </div>
+
+          <div id="grupoFaixaPesoIdeal" class="form-group">
+            <label for="pesoIdeal">Peso ideal:</label>
+            <input name="pesoIdeal" type="tepesot" disabled="disabled" class="form-control">
+          </div>
+
+          <button type="button" class="btn btn-primary"
+          onclick="calcularIMC()">Calcular IMC</button>
+          <button type="reset" class="btn btn-primary">Limpar</button>
+        </form>
+
+      </div>
+
+    </body>
+    </html>
