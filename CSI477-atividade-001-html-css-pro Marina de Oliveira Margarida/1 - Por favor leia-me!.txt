@@ -1,0 +1,1 @@
+Fernando, bom dia, como eu lhe disse na aula do dia 12/12/17, eu havia colocado a pasta do bootstrap no meu projeto, e o Sr. permitiu que eu adicionasse a pasta, então eu fiz a modificação, adicionei a pasta do bootstrap ao projeto, e modifiquei as "referências" nos meus arquivos html. 
