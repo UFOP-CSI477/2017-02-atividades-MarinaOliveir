@@ -1,0 +1,36 @@
+
+/* 
+    Created on : 21/12/2017, 16:42:54
+    Author     : Marina
+*/
+
+img {
+    height: 250px;
+    width: 250px;
+}
+
+.img-thumbnail {
+  width: 200px;
+  height: 300px;
+  margin-bottom: 10px;
+}
+
+.btn {
+  width: 200px;
+  height: 300px;
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.clicada{
+    background: #94b8b8;
+    padding: 10px;
+}
+
+.par{
+    background: #1aff66;
+    color: black;
+    padding: 10px;
+}
+

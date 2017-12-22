@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Atividade Avaliativa II</title>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/geometrica.css">
+        <link rel="stylesheet" type="text/css" href="css/tiraBorda.css">
+        <script src="js/geometricas.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container">
+            <div class="jumbotron text-center" style="background-color:#ccffcc">
+                <h2>Figuras Geométricas - Bootstrap</h2>
+                <h4>Associe as figuras aos seus respectivos nomes.</h4>
+            </div>
+
+            <fieldset>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <button id="triangulo" type="button" class="btn" onclick="selecionaBtn(this)">TRIÂNGULO</button>;
+                        <button id="quadrado" type="button" class="btn" onclick="selecionaBtn(this)">QUADRADO</button>;
+                        <button id="circulo" type="button" class="btn" onclick="selecionaBtn(this)">CÍRCULO</button>;
+                        <button id="retangulo" type="button" class="btn" onclick="selecionaBtn(this)">RETÂNGULO</button>;<br>
+                    </div>
+                    <div class="col-lg-4"></div>
+                    <div class="col-lg-4">
+                        <img id="imgRetangulo" src="imagens/geometricas/retangulo.png" class="img-thumbnail" onclick="selecionaImagem(this)">
+                        <img id="imgQuadrado" src="imagens/geometricas/quadrado.png" class="img-thumbnail" onclick="selecionaImagem(this)">
+                        <img id="imgTriangulo" src="imagens/geometricas/triangulo.jpg" class="img-thumbnail" onclick="selecionaImagem(this)">
+                        <img id="imgCirculo" src="imagens/geometricas/circulo.png" class="img-thumbnail" onclick="selecionaImagem(this)">
+
+                    </div>
+
+
+                </div>
+            </fieldset>
+            <a href="index.html" class="btn btn-default" id="voltar" role="button" style="width: auto; height: 30px;">VOLTAR</a>
+        </div>
+    </body>
+</html>

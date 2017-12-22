@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Exercício Avaliativo II</title>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/imagens.css">
+        <link rel="stylesheet" type="text/css" href="css/tiraBorda.css">
+        <script src="js/jquery-3.2.1.js"></script>
+        <script src="js/funcoesDidaticaParaCriancas.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container">
+            <div class="jumbotron text-center" style="background-color: #ffccff">
+                <h2>Didática para crianças - JQUERY - Bootstrap</h2>
+                <h4>Clique na figura que não combina em cada grupo, para removê-la!</h4>
+            </div>
+            <fieldset>
+                <legend>Grupo 1</legend>
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-4">
+                        <figure>
+                            <img src="imagens/grupo1/arroz.jpg" class="img-circle" alt="Arroz">
+                            <figcaption> • Arroz</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-4">
+                        <figure>
+                            <img src="imagens/grupo1/feijao.jpg" class="img-circle"  alt="Feijão">
+                            <figcaption> • Feijão</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-4">
+                        <figure>
+                            <img src="imagens/grupo1/batata.jpg" class="img-circle"  alt="Batata">
+                            <figcaption> • Batata</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-4">
+                        <figure>
+                            <img src="imagens/grupo1/sabonete.jpg" id="sabao" class="img-circle"  alt="Sabonete">
+                            <figcaption id="legendaSabao"> • Sabonete</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Grupo 2</legend>
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-4">
+                        <figure>
+                            <img src="imagens/grupo2/bicicleta.jpg" class="img-circle" alt="Bicicleta">
+                            <figcaption> • Bicicleta</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-4">
+                        <figure>
+                            <img src="imagens/grupo2/carro.jpg" class="img-circle"  alt="Carro">
+                            <figcaption> • Carro</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-4">
+                        <figure>
+                            <img src="imagens/grupo2/algodao.jpg" id="algodao" class="img-circle"  alt="Algodao">
+                            <figcaption id="legendaAlgodao"> • Algodão</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-4">
+                        <figure>
+                            <img src="imagens/grupo2/moto.jpg" class="img-circle"  alt="Moto">
+                            <figcaption> • Sabonete</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Grupo 3</legend>
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-4">
+                        <figure>
+                            <img src="imagens/grupo3/oculos.jpg" class="img-circle" alt="Oculos">
+                            <figcaption> • Óculos</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-4">
+                        <figure>
+                            <img src="imagens/grupo3/cadeira.jpg" class="img-circle"  alt="Cadeira">
+                            <figcaption> • Cadeira de Praia</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-4">
+                        <figure>
+                            <img src="imagens/grupo3/sombrinha.jpg" class="img-circle"  alt="Sombrinha">
+                            <figcaption> • Sombrinha</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-4">
+                        <figure>
+                            <img src="imagens/grupo3/maquina.jpg" id="maquina" class="img-circle"  alt="Maquina">
+                            <figcaption id="legendaMaquina"> • Máquina de Lavar</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Grupo 4</legend>
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-4">
+                        <figure>
+                            <img src="imagens/grupo4/bola.jpg" class="img-circle" alt="Bola">
+                            <figcaption> • Bola</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-4">
+                        <figure>
+                            <img src="imagens/grupo4/skate.jpg" class="img-circle"  alt="Skate">
+                            <figcaption> • Skate</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-4">
+                        <figure>
+                            <img src="imagens/grupo4/patins.jpg" class="img-circle"  alt="Patins">
+                            <figcaption> • Patins</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-4">
+                        <figure>
+                            <img src="imagens/grupo4/chave.jpg" id="chave" class="img-circle"  alt="Chave">
+                            <figcaption id="legendaChave"> • Chave de fenda</figcaption>
+                        </figure>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+            </fieldset>
+            <br>
+        </div>
+        <a href="index.html" class="btn btn-default" role="button">VOLTAR</a>
+    </body>
+</html>

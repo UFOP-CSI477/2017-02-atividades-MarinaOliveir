@@ -1,0 +1,19 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.wrapper {
+  min-height: 1000px;
+}
+
+.footer{
+  height: auto;
+  font-family:cursive;
+  text-align: center;
+  background:#f0f0f5;
+}
+
+.push {
+  height: 50px;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercício Avaliativo II</title>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/tiraBorda.css">
+        <script src="js/funcoes.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container">
+
+            <div class="jumbotron text-center" style="background-color: #ccf5ff">
+                <h2>Escala Richter - JS/CSS - Bootstrap</h2>
+            </div>
+
+            <form name="dados">
+
+                <div id="grupoV1" class="form-group">
+                    <label for="valor1">Insira a amplitude, em milímetros (Valor A):</label>
+                    <input name="valor1" type="text" class="form-control">
+
+                    <div class="alert alert-danger" style="display: none" id="alertaV1">
+                    </div>
+
+                </div>
+
+                <div id="grupoV2" class="form-group">
+                    <label for="valor2">Insira o valor da variação do tempo, em segundos (ΔT):</label>
+                    <input name="valor2" type="text" class="form-control">
+
+                    <div class="alert alert-danger" style="display: none" id="alertaV2">
+                    </div>
+
+                </div>
+
+                <div id="grupoRes" class="form-group">
+                    <label for="resultado">Magnitude:</label>
+                    <input name="resultado" type="text" disabled="disabled" class="form-control">
+                </div>
+
+                <div id="grupoCategoria" class="form-group">
+                    <label for="categoria">Efeitos:</label>
+                    <input name="categoria" type="text" disabled="disabled" class="form-control">
+                </div>
+
+                <button type="button" class="btn btn-primary"
+                        onclick="calculaEscalaRichter()">Calcular Magnitude</button>
+                <button type="reset" class="btn btn-primary">Limpar</button>
+                <a href="index.html" class="btn btn-default" role="button">VOLTAR</a>
+            </form>
+
+        </div>
+
+        
+    </body>
+</html>
+
